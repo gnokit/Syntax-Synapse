@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlogEntries from "@/components/entries/BlogEntry.astro";
-import Cta from "@/components/global/Cta.astro";
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("posts");
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
@@ -14,16 +13,22 @@ const sortedPosts = allPosts.sort(
 <BaseLayout>
   <section>
     <div class="py-24">
-      <h1
-        class="text-4xl text-balance font-medium font-display text-base-900 max-w-xl"
-      >
-        A simple blog built with Astro and Tailwind CSS
-      </h1>
-      <div class="flex flex-wrap gap-3 mt-8">
+      <div class="max-w-3xl">
+        <h1
+          class="text-4xl md:text-5xl text-balance font-bold font-display text-base-900 mb-6"
+        >
+          Welcome to Syntax & Synapse
+        </h1>
+        <p class="text-xl text-base-600 mb-8 leading-relaxed">
+          Exploring the intersection of AI and software development through practical tutorials, cutting-edge insights, and real-world applications.
+        </p>
+      </div>
+      
+      <div class="flex flex-wrap gap-3 mt-8 mb-12">
         {
           tags.map((tag) => (
             <a
-              class=" hover:text-blue-500 text-xs font-medium text-base-600"
+              class="px-3 py-1 text-sm font-medium text-base-600 bg-base-100 rounded-full hover:bg-accent-100 hover:text-accent-700 transition-colors"
               href={`/tags/${tag}`}
             >
               {tag}
@@ -31,6 +36,7 @@ const sortedPosts = allPosts.sort(
           ))
         }
       </div>
+      
       <div class="grid grid-cols-1 mt-4 gap-8 gap-y-24 sm:grid-cols-2">
         {
           sortedPosts.map((post) => (
@@ -42,12 +48,11 @@ const sortedPosts = allPosts.sort(
               author={post.data.author}
               image={post.data.image.url}
               description={post.data.description}
-              pubDate={post.data.pubDate.toString().slice(0, 10)}
+              pubDate={new Date(post.data.pubDate).toISOString().slice(0, 10)}
             />
           ))
         }
       </div>
     </div>
   </section>
-  <Cta />
 </BaseLayout>

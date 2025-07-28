@@ -4,7 +4,7 @@ pubDate: 2025-07-28
 description: "Introducing a new blog at the intersection of AI and software development"
 author: "Syntax & Synapse"
 image:
-  url: "../../images/blog/placeholder.svg"
+  url: "../../images/blog/2F3DBABC-8E9E-49AD-BBC3-317795D304AC_1_105_c.jpeg"
   alt: "Neural network visualization overlaid with code"
 tags: ["introduction", "AI", "software development", "blog"]
 ---
