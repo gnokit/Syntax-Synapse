@@ -42,7 +42,7 @@ const { posts } = Astro.props;
         {
           posts.map((post) => (
             <BlogEntries
-              url={"/posts/" + post.slug}
+              url={`${import.meta.env.BASE_URL}/posts/${post.slug}`}
               title={post.data.title}
               description={post.data.description}
               alt={post.data.title}

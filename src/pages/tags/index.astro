@@ -21,7 +21,7 @@ const pageTitle = "Tag Index";
           sortedTags.map((tag) => (
             <a
               class=" hover:text-blue-500 text-xs font-medium text-base-600"
-              href={`/tags/${tag}`}
+              href={`${import.meta.env.BASE_URL}/tags/${tag}`}
             >
               {tag}
             </a>
