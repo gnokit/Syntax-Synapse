@@ -40,7 +40,7 @@
   --color-text: var(--color-base-900);
   --color-text-secondary: var(--color-base-700);
   --color-border: var(--color-base-200);
-  --color-accent: var(--color-accent-600);
+  --color-accent: #FF00BC;
 }
 
 /* Dark mode color overrides */
@@ -50,7 +50,7 @@
   --color-text: var(--color-base-100);
   --color-text-secondary: var(--color-base-400);
   --color-border: var(--color-base-700);
-  --color-accent: var(--color-accent-400);
+  --color-accent: #6449F2;
 }
 
 /* CSS */

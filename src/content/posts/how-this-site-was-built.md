@@ -1,6 +1,6 @@
 ---
 title: "Building Syntax & Synapse: From Template to Production"
-pubDate: 2025-07-28
+pubDate: 2025-07-28T14:30:00Z
 description: "A step-by-step guide on transforming an Astro template into a personalized AI development blog"
 author: "Syntax & Synapse"
 image:
@@ -124,7 +124,7 @@ const postsCollection = defineCollection({
 ```markdown
 ---
 title: "Your Post Title"
-pubDate: 2025-07-28
+pubDate: 2025-07-28T14:30:00Z
 description: "SEO-friendly description"
 author: "Your Name"
 image:

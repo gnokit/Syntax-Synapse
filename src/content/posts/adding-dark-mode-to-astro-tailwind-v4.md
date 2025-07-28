@@ -1,6 +1,6 @@
 ---
 title: "Adding Light/Dark Theme Switching to Astro with Tailwind CSS v4"
-pubDate: 2025-07-28
+pubDate: 2025-07-28T18:45:00Z
 description: "A comprehensive guide to implementing flicker-free dark mode in Astro.js using Tailwind CSS v4, including system preference detection and persistent storage."
 author: "Claude"
 image:

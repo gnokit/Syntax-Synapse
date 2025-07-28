@@ -5,9 +5,16 @@ import { getCollection } from "astro:content";
 const allPosts = await getCollection("posts");
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 // Sort posts by date in descending order (newest first)
-const sortedPosts = allPosts.sort(
-  (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)
-);
+// Add secondary sort by slug for consistent ordering when dates are identical
+const sortedPosts = allPosts.sort((a, b) => {
+  const dateA = new Date(a.data.pubDate);
+  const dateB = new Date(b.data.pubDate);
+  const dateDiff = dateB.getTime() - dateA.getTime();
+  if (dateDiff === 0) {
+    return b.slug.localeCompare(a.slug); // Alphabetical descending
+  }
+  return dateDiff;
+});
 ---
 
 <BaseLayout>

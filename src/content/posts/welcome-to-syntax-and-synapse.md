@@ -1,6 +1,6 @@
 ---
 title: "Welcome to Syntax & Synapse"
-pubDate: 2025-07-28
+pubDate: 2025-07-28T09:00:00Z
 description: "Introducing a new blog at the intersection of AI and software development"
 author: "Syntax & Synapse"
 image:
