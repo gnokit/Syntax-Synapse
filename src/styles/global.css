@@ -16,6 +16,17 @@
   --color-base-800: oklch(35.42% 0.009 285.95);
   --color-base-900: oklch(23.48% 0.004 264.49);
   --color-base-950: oklch(16.89% 0.002 286.18);
+  --color-accent-50: oklch(96% 0.03 264);
+  --color-accent-100: oklch(91% 0.07 264);
+  --color-accent-200: oklch(83% 0.14 264);
+  --color-accent-300: oklch(75% 0.2 264);
+  --color-accent-400: oklch(67% 0.24 264);
+  --color-accent-500: oklch(59% 0.26 264);
+  --color-accent-600: oklch(51% 0.25 264);
+  --color-accent-700: oklch(43% 0.22 264);
+  --color-accent-800: oklch(35% 0.18 264);
+  --color-accent-900: oklch(27% 0.14 264);
+  --color-accent-950: oklch(19% 0.1 264);
 }
 /* CSS */
 :root {

@@ -20,6 +20,6 @@ export default defineConfig({
     skipInline: false,
     drafts: true
   },
-  site: 'https://yourwebsite.com',
+  site: 'https://gnokit.github.io/syntax-and-synapse',
   integrations: [sitemap(), mdx()]
 });
