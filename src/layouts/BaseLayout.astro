@@ -7,10 +7,28 @@ import Footer from "@/components/global/Footer.astro";
 <html lang="en">
   <head>
     <BaseHead />
+    <!-- Blocking theme script - runs before page paint -->
+    <script is:inline>
+      (() => {
+        const key = 'theme-pref';
+        const preference = localStorage.getItem(key) ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.classList.toggle('dark', preference === 'dark');
+      })();
+    </script>
   </head>
-  <body class="flex flex-col max-w-3xl min-h-screen px-8 mx-auto bg-white">
+  <body class="flex flex-col max-w-3xl min-h-screen px-8 mx-auto bg-bg text-text">
     <Navigation />
     <main class="flex-grow"><slot /></main>
     <Footer />
   </body>
 </html>
+
+<!-- Theme toggle helper script -->
+<script>
+  window.toggleTheme = () => {
+    const root = document.documentElement;
+    const isDark = root.classList.toggle('dark');
+    localStorage.setItem('theme-pref', isDark ? 'dark' : 'light');
+  };
+</script>

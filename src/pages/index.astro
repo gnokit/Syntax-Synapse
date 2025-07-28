@@ -15,11 +15,11 @@ const sortedPosts = allPosts.sort(
     <div class="py-24">
       <div class="max-w-3xl">
         <h1
-          class="text-4xl md:text-5xl text-balance font-bold font-display text-base-900 mb-6"
+          class="text-4xl md:text-5xl text-balance font-bold font-display text-text mb-6"
         >
           Welcome to Syntax & Synapse
         </h1>
-        <p class="text-xl text-base-600 mb-8 leading-relaxed">
+        <p class="text-xl text-text-secondary mb-8 leading-relaxed">
           Exploring the intersection of AI and software development through practical tutorials, cutting-edge insights, and real-world applications.
         </p>
       </div>
@@ -28,7 +28,7 @@ const sortedPosts = allPosts.sort(
         {
           tags.map((tag) => (
             <a
-              class="px-3 py-1 text-sm font-medium text-base-600 bg-base-100 rounded-full hover:bg-accent-100 hover:text-accent-700 transition-colors"
+              class="px-3 py-1 text-sm font-medium text-text-secondary bg-bg-secondary rounded-full hover:bg-accent hover:text-white transition-colors"
               href={`${import.meta.env.BASE_URL}/tags/${tag}`}
             >
               {tag}

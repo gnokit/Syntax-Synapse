@@ -17,16 +17,16 @@ const { title, url, description, pubDate, author, image, tags } = Astro.props;
   </a>
 
   <div class="mt-1">
-    <div class="flex items-center space-x-1 text-xs text-base-500">
+    <div class="flex items-center space-x-1 text-xs text-text-secondary">
       <span class="font-medium">{author}</span>
       <span aria-hidden="true">&middot;</span>
       <time datetime={pubDate}>{pubDate}</time>
     </div>
 
-    <h3 class="mt-4 text-base text-base-900 text-balance">
-      <a href={url} class="hover:underline">{title}</a>
+    <h3 class="mt-4 text-base text-text text-balance">
+      <a href={url} class="hover:underline hover:text-accent">{title}</a>
     </h3>
 
-    <p class="mt-1 text-sm text-base-500 line-clamp-2">{description}</p>
+    <p class="mt-1 text-sm text-text-secondary line-clamp-2">{description}</p>
   </div>
 </article>
