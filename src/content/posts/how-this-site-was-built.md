@@ -41,7 +41,7 @@ npm run dev  # Starts at localhost:4321
 
 ```javascript
 export default defineConfig({
-  site: 'https://gnokit.github.io/syntax-and-synapse', // Your GitHub Pages URL
+  site: 'https://gnokit.github.io/Syntax-Synapse', // Your GitHub Pages URL
   vite: {
     plugins: [tailwindcss()],
   },
@@ -67,7 +67,7 @@ Updated every meta tag, Open Graph data, and Twitter cards:
 <AstroSeo
   title="Syntax & Synapse"
   description="Exploring the intersection of AI and software development..."
-  canonical="https://gnokit.github.io/syntax-and-synapse"
+  canonical="https://gnokit.github.io/Syntax-Synapse"
   openGraph={{
     site_name: "Syntax & Synapse",
     type: "website",

@@ -33,7 +33,7 @@ All commands are run from the root of the project:
 
 ## Deployment
 
-This site is configured for GitHub Pages deployment. The built site will be deployed to `https://gnokit.github.io/syntax-and-synapse`.
+This site is configured for GitHub Pages deployment. The built site will be deployed to `https://gnokit.github.io/Syntax-Synapse`.
 
 ## Want to learn more?
 
