@@ -20,6 +20,7 @@ export default defineConfig({
     skipInline: false,
     drafts: true
   },
-  site: 'https://gnokit.github.io/Syntax-Synapse',
+  site: 'https://gnokit.github.io',
+  base: '/Syntax-Synapse',
   integrations: [sitemap(), mdx()]
 });
