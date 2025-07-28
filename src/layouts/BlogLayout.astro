@@ -6,27 +6,27 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout>
   <section>
-    <div class="py-24">
+    <div class="py-24 lg:py-32 xl:py-40">
       <div class="lg:text-center">
-        <div class="max-w-xl mx-auto">
+        <div class="max-w-xl lg:max-w-4xl xl:max-w-6xl mx-auto">
           <h1
-            class="text-4xl text-balance font-medium font-display text-text"
+            class="text-4xl lg:text-6xl xl:text-7xl text-balance font-medium font-display text-text"
           >
             {frontmatter.title}
           </h1>
-          <p class="max-w-2xl mx-auto mt-4 text-text-secondary text-sm text-balance">
+          <p class="max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto mt-4 lg:mt-6 xl:mt-8 text-text-secondary text-sm lg:text-lg xl:text-xl text-balance">
             <em>{frontmatter.description}</em>
           </p>
         </div>
         <Image
-          width={1280}
-          height={720}
+          width={1920}
+          height={1080}
           src={frontmatter.image.url}
           alt={frontmatter.image.alt}
-          class="object-cover object-center w-full aspect-12/7 rounded-xl mt-4"
+          class="object-cover object-center w-full aspect-12/7 rounded-xl mt-4 lg:mt-6 xl:mt-8 max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto"
         />
-        <div class="flex flex-col justify-between mt-4 md:flex-row">
-          <p class="text-xs text-text-secondary">
+        <div class="flex flex-col justify-between mt-4 lg:mt-6 xl:mt-8 md:flex-row max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto">
+          <p class="text-xs lg:text-sm xl:text-base text-text-secondary">
             {frontmatter.pubDate.toString().slice(0, 10)} - Written by: {
               frontmatter.author
             }
@@ -34,7 +34,7 @@ const { frontmatter } = Astro.props;
           <div class="flex gap-3">
             {
               frontmatter.tags.map((tag) => (
-                <span class="hover:text-accent text-xs font-medium text-text-secondary">
+                <span class="hover:text-accent text-xs lg:text-sm xl:text-base font-medium text-text-secondary">
                   <a href={`/tags/${tag}`}>{tag}</a>
                 </span>
               ))
@@ -43,7 +43,7 @@ const { frontmatter } = Astro.props;
         </div>
       </div>
 
-      <div class="prose prose-sm max-w-md mt-12 mx-auto dark:prose-invert">
+      <div class="prose prose-sm lg:prose-xl xl:prose-2xl max-w-md lg:max-w-3xl xl:max-w-4xl mt-12 lg:mt-16 xl:mt-20 mx-auto dark:prose-invert">
         <slot />
       </div>
     </div>
