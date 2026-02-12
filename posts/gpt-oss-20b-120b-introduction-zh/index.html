@@ -1,0 +1,404 @@
+<!DOCTYPE html><html lang="en"> <head><title>Syntax &amp; Synapse</title>
+<meta name="description" content="Exploring the intersection of AI and software development through tutorials, insights, and practical applications.">
+<link rel="canonical" href="https://gnokit.github.io/Syntax-Synapse">
+<meta property="og:title" content="Syntax &amp; Synapse">
+<meta property="og:description" content="Exploring the intersection of AI and software development through tutorials, insights, and practical applications.">
+<meta property="og:url" content="https://gnokit.github.io/Syntax-Synapse">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://gnokit.github.io/Syntax-Synapse/og-image.jpg">
+<meta property="og:image:alt" content="Syntax &amp; Synapse - AI and Software Development Blog">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Syntax &amp; Synapse">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@syntax_synapse">
+<meta name="twitter:creator" content="@gnokit"> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Basic Meta Tags --> <title>Syntax & Synapse</title> <meta name="description" content="Exploring the intersection of AI and software development through tutorials, insights, and practical applications."> <meta name="keywords" content="AI, artificial intelligence, software development, machine learning, programming, tutorials"> <meta name="author" content="Syntax & Synapse"> <!-- Favicons --> <link rel="icon" href="/favicon.ico" sizes="any"> <link rel="icon" href="/icon.svg" type="image/svg+xml"> <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <!-- Favicon for IE --> <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> <!-- Favicons for different sizes --> <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"> <!-- Open Graph / Facebook --> <meta property="og:type" content="website"> <meta property="og:url" content="https://gnokit.github.io/Syntax-Synapse/"> <meta property="og:title" content="Syntax & Synapse"> <meta property="og:description" content="Exploring the intersection of AI and software development through tutorials, insights, and practical applications."> <meta property="og:image" content="https://gnokit.github.io/Syntax-Synapse/og-image.jpg"> <!-- Twitter --> <meta property="twitter:card" content="summary_large_image"> <meta property="twitter:url" content="https://gnokit.github.io/Syntax-Synapse/"> <meta property="twitter:title" content="Syntax & Synapse"> <meta property="twitter:description" content="Exploring the intersection of AI and software development through tutorials, insights, and practical applications."> <meta property="twitter:image" content="https://gnokit.github.io/Syntax-Synapse/og-image.jpg"> <!-- Canonical URL --> <link rel="canonical" href="https://gnokit.github.io/Syntax-Synapse/"> <!-- Additional SEO --> <meta name="robots" content="index, follow"> <meta name="googlebot" content="index, follow"> <!-- Apple Touch Icon (already included in favicons, but keeping for backwards compatibility) --> <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> <!-- Theme Color for Mobile Browsers --> <meta name="theme-color" content="#6366f1"> <!-- For IE --> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- HTML in your document's head --> <link rel="preconnect" href="https://rsms.me/"> <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> <link href="https://api.fontshare.com/v2/css?f[]=jet-brains-mono@1,2&display=swap" rel="stylesheet"> <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script><!-- Blocking theme script - runs before page paint --><script>
+      (() => {
+        const key = 'theme-pref';
+        const preference = localStorage.getItem(key) ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.classList.toggle('dark', preference === 'dark');
+      })();
+    </script><link rel="stylesheet" href="/Syntax-Synapse/_astro/_slug_.Da9Fhqz9.css"></head> <body class="flex flex-col max-w-3xl lg:max-w-7xl xl:max-w-screen-2xl min-h-screen px-8 mx-auto bg-bg text-text"> <div x-data="{ open: false }" class="relative flex flex-col w-full mx-auto rounded-xl md:rounded-full md:items-center md:justify-between md:flex-row"> <div class="flex flex-row items-center justify-between py-2 md:justify-start"> <a class="text-base font-medium tracking-tight uppercase text-text" href="/Syntax-Synapse/">
+Syntax & Synapse
+</a> <button @click="open = !open" class="inline-flex items-center justify-center p-2 text-text hover:text-accent focus:outline-none focus:text-text md:hidden"> <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24"> <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> <nav :class="{'flex': open, 'hidden': !open}" class="flex-col justify-center flex-grow hidden py-12 md:py-0 md:flex md:items-end md:flex-row"> <div class="items-center justify-center list-none space-y-2 md:space-y-0 md:ml-auto md:inline-flex md:text-left gap-3"> <button id="theme-toggle" class="p-2 rounded-full hover:bg-base-200 dark:hover:bg-base-800 transition-colors duration-200 cursor-pointer" aria-label="Toggle dark mode" title="Toggle dark mode"> <!-- Sun icon (light mode) --> <svg class="w-5 h-5 text-base-900 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <!-- Moon icon (dark mode) --> <svg class="w-5 h-5 text-base-100 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> </button> <script type="module">const e=document.getElementById("theme-toggle");e?.addEventListener("click",()=>{window.toggleTheme()});</script> <a href="https://github.com/gnokit/Syntax-Synapse" class="py-1.5 px-2.5 border focus:ring-2 h-7.5 text-sm rounded-full border-transparent bg-text hover:bg-text/10 text-white duration-200 focus:ring-offset-2 focus:ring-white hover:text-text inline-flex items-center justify-center ring-1 ring-transparent dark:bg-accent dark:hover:bg-accent/80 dark:text-text">
+GitHub
+</a> </div> </nav> </div> <main class="flex-grow"> <section> <div class="py-24 lg:py-32 xl:py-40"> <div class="lg:text-center"> <div class="max-w-xl lg:max-w-4xl xl:max-w-6xl mx-auto"> <h1 class="text-4xl lg:text-6xl xl:text-7xl text-balance font-medium font-display text-text"> OpenAI GPT-OSS 20B/120B 開源模型深度解析：AI 民主化的里程碑 </h1> <p class="max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto mt-4 lg:mt-6 xl:mt-8 text-text-secondary text-sm lg:text-lg xl:text-xl text-balance"> <em>深入探討 OpenAI 最新開源的 GPT-OSS 20B 和 120B 模型，從技術架構到實際應用的完整指南</em> </p> </div> <img src="/Syntax-Synapse/_astro/CCECCF0A-FAC1-4B1F-B9CD-E60C1E0ED919_1_105_c.D9MtXVm0_Z2tyC98.webp" alt="神經網絡可視化覆蓋代碼" width="1920" height="1080" loading="lazy" decoding="async" class="object-cover object-center w-full aspect-12/7 rounded-xl mt-4 lg:mt-6 xl:mt-8 max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto"> <div class="flex flex-col justify-between mt-4 lg:mt-6 xl:mt-8 md:flex-row max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto"> <p class="text-xs lg:text-sm xl:text-base text-text-secondary"> Wed Aug 06 - Written by: Syntax &amp; Synapse </p> <div class="flex gap-3"> <span class="hover:text-accent text-xs lg:text-sm xl:text-base font-medium text-text-secondary"> <a href="/tags/GPT-OSS">GPT-OSS</a> </span><span class="hover:text-accent text-xs lg:text-sm xl:text-base font-medium text-text-secondary"> <a href="/tags/OpenAI">OpenAI</a> </span><span class="hover:text-accent text-xs lg:text-sm xl:text-base font-medium text-text-secondary"> <a href="/tags/開源">開源</a> </span><span class="hover:text-accent text-xs lg:text-sm xl:text-base font-medium text-text-secondary"> <a href="/tags/AI模型">AI模型</a> </span><span class="hover:text-accent text-xs lg:text-sm xl:text-base font-medium text-text-secondary"> <a href="/tags/LLM">LLM</a> </span><span class="hover:text-accent text-xs lg:text-sm xl:text-base font-medium text-text-secondary"> <a href="/tags/中文">中文</a> </span> </div> </div> </div> <div class="prose prose-sm lg:prose-xl xl:prose-2xl max-w-md lg:max-w-3xl xl:max-w-4xl mt-12 lg:mt-16 xl:mt-20 mx-auto dark:prose-invert">  <p>今天，OpenAI 正式發佈了備受期待的 <strong>GPT-OSS</strong>（Generative Pre-trained Transformer Open Source Software）開源模型系列，推出了 <strong>20B</strong> 和 <strong>120B</strong> 兩個版本。這標誌著人工智能領域的一個重要轉折點，讓最先進的大型語言模型技術首次完全開源。</p>
+<h2 id="-模型發佈概況">🚀 模型發佈概況</h2>
+<p>GPT-OSS 系列於 <strong>2025年8月6日</strong> 正式發佈，採用 <strong>Apache 2.0</strong> 開源許可證，允許商業和研究用途。這兩個版本的發佈代表了 OpenAI 對 AI 民主化的承諾，為開發者、研究人員和企業提供了前所未有的機會。</p>
+<h3 id="核心特點">核心特點</h3>
+<ul>
+<li><strong>完全開源</strong>：權重、代碼、訓練數據全部公開</li>
+<li><strong>商業友好</strong>：Apache 2.0 許可證支持商業應用</li>
+<li><strong>多語言支持</strong>：原生支持中文在內的 100+ 種語言</li>
+<li><strong>工具使用</strong>：內建瀏覽器、Python 執行環境、圖像生成等工具</li>
+</ul>
+<h2 id="-技術規格與架構">🔧 技術規格與架構</h2>
+<h3 id="gpt-oss-20b-規格">GPT-OSS 20B 規格</h3>
+<ul>
+<li><strong>參數量</strong>：210億參數 (20.9B)</li>
+<li><strong>架構</strong>：MoE (Mixture of Experts)</li>
+<li><strong>專家數量</strong>：32 個專家網絡</li>
+<li><strong>激活參數</strong>：每個 token 激活 3.6B 參數</li>
+<li><strong>上下文長度</strong>：128K tokens</li>
+<li><strong>量化支持</strong>：原生支持 4-bit MXFP4</li>
+<li><strong>推理效率</strong>：16GB 記憶體即可運行</li>
+</ul>
+<h3 id="gpt-oss-120b-規格">GPT-OSS 120B 規格</h3>
+<ul>
+<li><strong>參數量</strong>：1170億參數 (116.8B)</li>
+<li><strong>架構</strong>：MoE (Mixture of Experts)</li>
+<li><strong>專家數量</strong>：128 個專家網絡</li>
+<li><strong>激活參數</strong>：每個 token 激活 5.1B 參數</li>
+<li><strong>上下文長度</strong>：128K tokens</li>
+<li><strong>量化支持</strong>：原生支持 4-bit MXFP4</li>
+<li><strong>推理效率</strong>：單張 H100 80GB 即可運行</li>
+</ul>
+<h3 id="架構創新">架構創新</h3>
+<h4 id="moe-架構優勢">MoE 架構優勢</h4>
+<p>GPT-OSS 採用了最先進的 MoE 架構：</p>
+<ul>
+<li><strong>稀疏激活</strong>：每個 token 只激活約 10% 的參數</li>
+<li><strong>專家路由</strong>：智能選擇最相關的專家網絡</li>
+<li><strong>負載均衡</strong>：動態平衡各專家的工作負載</li>
+</ul>
+<h4 id="量化技術">量化技術</h4>
+<ul>
+<li><strong>MXFP4 格式</strong>：4-bit 浮點數量化</li>
+<li><strong>精度保持</strong>：FP4 量化下僅損失 2-3% 性能</li>
+<li><strong>內存優化</strong>：相比 FP16 減少 75% 內存佔用</li>
+</ul>
+<h2 id="-性能基準測試">📊 性能基準測試</h2>
+<h3 id="標準基準測試結果">標準基準測試結果</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>基準測試</th><th>GPT-OSS 20B</th><th>GPT-OSS 120B</th><th>GPT-4o</th><th>Claude 3.5</th></tr></thead><tbody><tr><td><strong>MMLU</strong></td><td>75.2%</td><td>87.4%</td><td>87.2%</td><td>88.3%</td></tr><tr><td><strong>HumanEval</strong></td><td>72.1%</td><td>84.7%</td><td>87.6%</td><td>92.1%</td></tr><tr><td><strong>GSM8K</strong></td><td>78.9%</td><td>93.2%</td><td>94.2%</td><td>95.8%</td></tr><tr><td><strong>MT-Bench</strong></td><td>8.21</td><td>9.15</td><td>9.32</td><td>9.24</td></tr></tbody></table>
+<h3 id="中文任務表現">中文任務表現</h3>
+<p>在中文特定任務上，GPT-OSS 展現了優異的性能：</p>
+<ul>
+<li><strong>中文理解</strong>：C-Eval 達到 83.7% (120B)</li>
+<li><strong>古典漢語</strong>：文言文理解準確率 91.2%</li>
+<li><strong>現代漢語</strong>：日常對話理解準確率 94.8%</li>
+</ul>
+<h3 id="推理能力">推理能力</h3>
+<p>支持三個推理級別：</p>
+<ul>
+<li><strong>低級推理</strong>：快速響應，適合簡單任務</li>
+<li><strong>中級推理</strong>：平衡速度與準確性</li>
+<li><strong>高級推理</strong>：深度思考，最複雜問題</li>
+</ul>
+<h2 id="️-部署選項與實踐">🛠️ 部署選項與實踐</h2>
+<h3 id="本地部署方案">本地部署方案</h3>
+<h4 id="方案一ollama最簡單">方案一：Ollama（最簡單）</h4>
+<p><strong>系統要求</strong></p>
+<ul>
+<li><strong>GPT-OSS 20B</strong>: 16GB+ RAM，支持 CPU/GPU</li>
+<li><strong>GPT-OSS 120B</strong>: 80GB+ RAM，需要高端 GPU</li>
+</ul>
+<p><strong>安裝步驟</strong></p>
+<pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:var(--astro-code-token-comment)"># 1. 安裝 Ollama</span></span>
+<span class="line"><span style="color:var(--astro-code-token-comment)"># macOS/Linux</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">curl</span><span style="color:var(--astro-code-token-string)"> -fsSL</span><span style="color:var(--astro-code-token-string)"> https://ollama.com/install.sh</span><span style="color:var(--astro-code-token-keyword)"> |</span><span style="color:var(--astro-code-token-function)"> sh</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-comment)"># Windows: 下載安裝包 https://ollama.com/download</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-comment)"># 2. 下載並運行模型</span></span>
+<span class="line"><span style="color:var(--astro-code-token-comment)"># GPT-OSS 20B（適合大多數電腦）</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">ollama</span><span style="color:var(--astro-code-token-string)"> run</span><span style="color:var(--astro-code-token-string)"> gpt-oss:20b</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-comment)"># GPT-OSS 120B（需要高性能硬件）</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">ollama</span><span style="color:var(--astro-code-token-string)"> run</span><span style="color:var(--astro-code-token-string)"> gpt-oss:120b</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-comment)"># 3. API 調用（兼容 OpenAI API）</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">curl</span><span style="color:var(--astro-code-token-string)"> http://localhost:11434/api/chat</span><span style="color:var(--astro-code-token-string)"> -d</span><span style="color:var(--astro-code-token-string-expression)"> '{</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">  "model": "gpt-oss:20b",</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">  "messages": [</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    {"role": "user", "content": "你好！請介紹一下量子計算"}</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">  ]</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">}'</span></span></code></pre>
+<p><strong>進階配置</strong></p>
+<pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:var(--astro-code-token-comment)"># 創建自定義模型配置</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">cat</span><span style="color:var(--astro-code-token-keyword)"> ></span><span style="color:var(--astro-code-token-string)"> Modelfile</span><span style="color:var(--astro-code-token-keyword)"> &#x3C;&#x3C;</span><span style="color:var(--astro-code-foreground)"> EOF</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string)">FROM gpt-oss:20b</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string)">PARAMETER temperature 0.7</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string)">PARAMETER top_p 0.9</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string)">PARAMETER num_ctx 32768</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string)">SYSTEM 你是一個專業的AI助手，請用繁體中文回答</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">EOF</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">ollama</span><span style="color:var(--astro-code-token-string)"> create</span><span style="color:var(--astro-code-token-string)"> gpt-oss-zh</span><span style="color:var(--astro-code-token-string)"> -f</span><span style="color:var(--astro-code-token-string)"> Modelfile</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">ollama</span><span style="color:var(--astro-code-token-string)"> run</span><span style="color:var(--astro-code-token-string)"> gpt-oss-zh</span></span></code></pre>
+<h4 id="-推理級別控制">💭 推理級別控制</h4>
+<p>GPT-OSS 模型支持三種推理級別，可根據任務複雜度和延遲需求調整：</p>
+<p><strong>推理級別說明：</strong></p>
+<ul>
+<li>
+<p><strong>low（低級推理）</strong>：快速響應，適合簡單問答和創意寫作</p>
+<ul>
+<li>延遲：~1-2秒</li>
+<li>用途：日常對話、文本生成、基礎問答</li>
+<li>性能：保持基本準確性，速度優先</li>
+</ul>
+</li>
+<li>
+<p><strong>medium（中級推理）</strong>：平衡模式，適合大多數任務</p>
+<ul>
+<li>延遲：~3-5秒</li>
+<li>用途：代碼生成、數據分析、一般問題解決</li>
+<li>性能：在速度和準確性間取得平衡</li>
+</ul>
+</li>
+<li>
+<p><strong>high（高級推理）</strong>：深度思考，最適合複雜問題</p>
+<ul>
+<li>延遲：~10-30秒</li>
+<li>用途：數學證明、邏輯推理、複雜編程問題</li>
+<li>性能：最大化準確性，深度分析</li>
+</ul>
+</li>
+</ul>
+<p><strong>使用示例：</strong></p>
+<pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:var(--astro-code-token-comment)"># Ollama 中使用推理級別</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">ollama</span><span style="color:var(--astro-code-token-string)"> run</span><span style="color:var(--astro-code-token-string)"> gpt-oss:20b</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">>>> </span><span style="color:var(--astro-code-token-function)">/set</span><span style="color:var(--astro-code-token-string)"> reasoning</span><span style="color:var(--astro-code-token-string)"> high</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">>>> </span><span style="color:var(--astro-code-token-function)">請詳細解釋量子糾纏現象</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-comment)"># API 調用中使用</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">curl</span><span style="color:var(--astro-code-token-string)"> http://localhost:11434/api/chat</span><span style="color:var(--astro-code-token-string)"> -d</span><span style="color:var(--astro-code-token-string-expression)"> '{</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">  "model": "gpt-oss:20b",</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">  "messages": [</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    {"role": "user", "content": "證明哥德巴赫猜想"}</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">  ],</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">  "options": {</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    "reasoning": "high"</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">  }</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">}'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-comment)"># Python SDK 中使用</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">import</span><span style="color:var(--astro-code-token-string)"> openai</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">client</span><span style="color:var(--astro-code-token-string)"> =</span><span style="color:var(--astro-code-token-string)"> openai.OpenAI</span><span style="color:var(--astro-code-foreground)">(</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">    base_url</span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-string-expression)">"http://localhost:11434/v1"</span><span style="color:var(--astro-code-token-string)">,</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">    api_key</span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-string-expression)">"ollama"</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">response</span><span style="color:var(--astro-code-token-string)"> =</span><span style="color:var(--astro-code-token-string)"> client.chat.completions.create</span><span style="color:var(--astro-code-foreground)">(</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">    model</span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-string-expression)">"gpt-oss:20b"</span><span style="color:var(--astro-code-token-string)">,</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">    messages</span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-string)">[</span><span style="color:var(--astro-code-foreground)">{</span><span style="color:var(--astro-code-token-function)">"role"</span><span style="color:var(--astro-code-token-function)">:</span><span style="color:var(--astro-code-token-string-expression)"> "user"</span><span style="color:var(--astro-code-token-string)">,</span><span style="color:var(--astro-code-token-string-expression)"> "content"</span><span style="color:var(--astro-code-token-string)">:</span><span style="color:var(--astro-code-token-string-expression)"> "複雜的數學問題..."</span><span style="color:var(--astro-code-token-string)">}],</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">    extra_body</span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-foreground)">{</span><span style="color:var(--astro-code-token-function)">"reasoning"</span><span style="color:var(--astro-code-token-function)">:</span><span style="color:var(--astro-code-token-string-expression)"> "high"</span><span style="color:var(--astro-code-token-string)">}</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">)</span></span></code></pre>
+<h4 id="方案二lm-studio圖形界面">方案二：LM Studio（圖形界面）</h4>
+<p><strong>安裝與設置</strong></p>
+<ol>
+<li><strong>下載安裝</strong>: 訪問 <a href="https://lmstudio.ai">lmstudio.ai</a> 下載適合您系統的版本</li>
+<li><strong>硬件要求</strong>:
+<ul>
+<li><strong>20B模型</strong>: 16GB+ RAM，Apple Silicon Mac 或 NVIDIA GPU</li>
+<li><strong>120B模型</strong>: 80GB+ RAM，需要 H100/A100 等高端 GPU</li>
+</ul>
+</li>
+<li><strong>模型下載</strong>: 在 LM Studio 界面中搜索並下載 <code>openai/gpt-oss-20b</code> 或 <code>openai/gpt-oss-120b</code></li>
+</ol>
+<p><strong>圖形界面操作</strong></p>
+<ul>
+<li>啟動 LM Studio → 搜索 GPT-OSS 模型 → 點擊下載</li>
+<li>選擇推理級別（低/中/高）</li>
+<li>開始對話，支持中文輸入</li>
+</ul>
+<p><strong>API 集成</strong></p>
+<pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:var(--astro-code-token-keyword)">import</span><span style="color:var(--astro-code-foreground)"> requests</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-comment)"># LM Studio 本地 API</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">url </span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-string-expression)"> "http://localhost:1234/v1/chat/completions"</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">headers </span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-punctuation)"> {</span><span style="color:var(--astro-code-token-string-expression)">"Content-Type"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-string-expression)"> "application/json"</span><span style="color:var(--astro-code-token-punctuation)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">payload </span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-punctuation)"> {</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    "model"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-string-expression)"> "openai/gpt-oss-20b"</span><span style="color:var(--astro-code-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    "messages"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-foreground)"> [</span><span style="color:var(--astro-code-token-punctuation)">{</span><span style="color:var(--astro-code-token-string-expression)">"role"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-string-expression)"> "user"</span><span style="color:var(--astro-code-token-punctuation)">,</span><span style="color:var(--astro-code-token-string-expression)"> "content"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-string-expression)"> "你好！"</span><span style="color:var(--astro-code-token-punctuation)">}</span><span style="color:var(--astro-code-foreground)">]</span><span style="color:var(--astro-code-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    "temperature"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-constant)"> 0.7</span><span style="color:var(--astro-code-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    "max_tokens"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-constant)"> 512</span></span>
+<span class="line"><span style="color:var(--astro-code-token-punctuation)">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">response </span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-foreground)"> requests</span><span style="color:var(--astro-code-token-punctuation)">.</span><span style="color:var(--astro-code-token-function)">post</span><span style="color:var(--astro-code-token-punctuation)">(url, headers</span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-punctuation)">headers, json</span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-punctuation)">payload)</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">print</span><span style="color:var(--astro-code-token-punctuation)">(response.</span><span style="color:var(--astro-code-token-function)">json</span><span style="color:var(--astro-code-token-punctuation)">()[</span><span style="color:var(--astro-code-token-string-expression)">'choices'</span><span style="color:var(--astro-code-token-punctuation)">][</span><span style="color:var(--astro-code-token-constant)">0</span><span style="color:var(--astro-code-token-punctuation)">][</span><span style="color:var(--astro-code-token-string-expression)">'message'</span><span style="color:var(--astro-code-token-punctuation)">][</span><span style="color:var(--astro-code-token-string-expression)">'content'</span><span style="color:var(--astro-code-token-punctuation)">])</span></span></code></pre>
+<h2 id="-與其他模型對比">🔍 與其他模型對比</h2>
+<h3 id="開源模型對比">開源模型對比</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>模型</th><th>參數量</th><th>許可證</th><th>中文支持</th><th>工具使用</th></tr></thead><tbody><tr><td><strong>GPT-OSS 120B</strong></td><td>120B</td><td>Apache 2.0</td><td>✅ 原生</td><td>✅ 內建</td></tr><tr><td><strong>Llama 3.1 70B</strong></td><td>70B</td><td>Llama 2</td><td>✅ 微調</td><td>❌ 無</td></tr><tr><td><strong>Qwen 2 72B</strong></td><td>72B</td><td>Apache 2.0</td><td>✅ 原生</td><td>❌ 無</td></tr><tr><td><strong>Mistral Large 2</strong></td><td>123B</td><td>Apache 2.0</td><td>✅ 支持</td><td>❌ 無</td></tr></tbody></table>
+<h3 id="商業模型對比">商業模型對比</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>特性</th><th>GPT-OSS 120B</th><th>GPT-4o</th><th>Claude 3.5</th></tr></thead><tbody><tr><td><strong>成本</strong></td><td>免費開源</td><td>$0.06/1K tokens</td><td>$0.03/1K tokens</td></tr><tr><td><strong>可控性</strong></td><td>完全控制</td><td>API 限制</td><td>API 限制</td></tr><tr><td><strong>隱私</strong></td><td>本地部署</td><td>雲端處理</td><td>雲端處理</td></tr><tr><td><strong>定制性</strong></td><td>可微調</td><td>不可定制</td><td>不可定制</td></tr></tbody></table>
+<h2 id="-快速開始指南">🎯 快速開始指南</h2>
+<h3 id="5-分鐘快速體驗">5 分鐘快速體驗</h3>
+<pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:var(--astro-code-token-comment)"># 1. 安裝依賴</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">pip</span><span style="color:var(--astro-code-token-string)"> install</span><span style="color:var(--astro-code-token-string)"> transformers</span><span style="color:var(--astro-code-token-string)"> torch</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-comment)"># 2. 下載模型</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">from</span><span style="color:var(--astro-code-token-string)"> transformers</span><span style="color:var(--astro-code-token-string)"> import</span><span style="color:var(--astro-code-token-string)"> AutoTokenizer,</span><span style="color:var(--astro-code-token-string)"> AutoModelForCausalLM</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">tokenizer</span><span style="color:var(--astro-code-token-string)"> =</span><span style="color:var(--astro-code-token-string)"> AutoTokenizer.from_pretrained</span><span style="color:var(--astro-code-foreground)">(</span><span style="color:var(--astro-code-token-function)">"openai/gpt-oss-20b"</span><span style="color:var(--astro-code-foreground)">)</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">model</span><span style="color:var(--astro-code-token-string)"> =</span><span style="color:var(--astro-code-token-string)"> AutoModelForCausalLM.from_pretrained</span><span style="color:var(--astro-code-foreground)">(</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">    "openai/gpt-oss-20b"</span><span style="color:var(--astro-code-token-function)">,</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">    torch_dtype</span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-string)">torch.float16,</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">    device_map</span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-string-expression)">"auto"</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:var(--astro-code-token-comment)"># 3. 生成文本</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">prompt</span><span style="color:var(--astro-code-token-string)"> =</span><span style="color:var(--astro-code-token-string-expression)"> "Explain quantum computing in simple terms:"</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">inputs</span><span style="color:var(--astro-code-token-string)"> =</span><span style="color:var(--astro-code-token-string)"> tokenizer</span><span style="color:var(--astro-code-foreground)">(</span><span style="color:var(--astro-code-token-function)">prompt,</span><span style="color:var(--astro-code-token-string)"> return_tensors=</span><span style="color:var(--astro-code-token-string-expression)">"pt"</span><span style="color:var(--astro-code-foreground)">)</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">outputs</span><span style="color:var(--astro-code-token-string)"> =</span><span style="color:var(--astro-code-token-string)"> model.generate</span><span style="color:var(--astro-code-foreground)">(</span><span style="color:var(--astro-code-token-keyword)">**</span><span style="color:var(--astro-code-foreground)">inputs, max_length</span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-string)">200</span><span style="color:var(--astro-code-foreground)">)</span></span>
+<span class="line"><span style="color:var(--astro-code-token-function)">print</span><span style="color:var(--astro-code-foreground)">(</span><span style="color:var(--astro-code-token-string)">tokenizer.decode</span><span style="color:var(--astro-code-foreground)">(</span><span style="color:var(--astro-code-token-string)">outputs[0]</span><span style="color:var(--astro-code-foreground)">))</span></span></code></pre>
+<h3 id="生產環境配置">生產環境配置</h3>
+<pre class="astro-code css-variables" style="background-color:var(--astro-code-background);color:var(--astro-code-foreground); overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:var(--astro-code-token-comment)"># production_config.py</span></span>
+<span class="line"><span style="color:var(--astro-code-foreground)">MODEL_CONFIG </span><span style="color:var(--astro-code-token-keyword)">=</span><span style="color:var(--astro-code-token-punctuation)"> {</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    "model_name"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-string-expression)"> "openai/gpt-oss-120b"</span><span style="color:var(--astro-code-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    "device_map"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-string-expression)"> "auto"</span><span style="color:var(--astro-code-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    "torch_dtype"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-foreground)"> torch</span><span style="color:var(--astro-code-token-punctuation)">.</span><span style="color:var(--astro-code-foreground)">float16</span><span style="color:var(--astro-code-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    "max_memory"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-punctuation)"> {</span><span style="color:var(--astro-code-token-constant)">0</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-string-expression)"> "80GB"</span><span style="color:var(--astro-code-token-punctuation)">,</span><span style="color:var(--astro-code-token-constant)"> 1</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-string-expression)"> "80GB"</span><span style="color:var(--astro-code-token-punctuation)">,</span><span style="color:var(--astro-code-token-constant)"> 2</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-string-expression)"> "80GB"</span><span style="color:var(--astro-code-token-punctuation)">,</span><span style="color:var(--astro-code-token-constant)"> 3</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-string-expression)"> "80GB"</span><span style="color:var(--astro-code-token-punctuation)">},</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    "load_in_4bit"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-token-constant)"> True</span><span style="color:var(--astro-code-token-punctuation)">,</span></span>
+<span class="line"><span style="color:var(--astro-code-token-string-expression)">    "bnb_4bit_compute_dtype"</span><span style="color:var(--astro-code-token-punctuation)">:</span><span style="color:var(--astro-code-foreground)"> torch</span><span style="color:var(--astro-code-token-punctuation)">.</span><span style="color:var(--astro-code-foreground)">float16</span></span>
+<span class="line"><span style="color:var(--astro-code-token-punctuation)">}</span></span></code></pre>
+<h2 id="-未來展望與路線圖">🔮 未來展望與路線圖</h2>
+<h3 id="即將推出的功能">即將推出的功能</h3>
+<ul>
+<li><strong>GPT-OSS 405B</strong>：更大規模的 405B 參數版本</li>
+<li><strong>多模態支持</strong>：圖像、音頻、視頻理解</li>
+<li><strong>實時學習</strong>：在線學習新知識</li>
+<li><strong>聯邦學習</strong>：保護隱私的分佈式訓練</li>
+</ul>
+<h3 id="社區發展計劃">社區發展計劃</h3>
+<ul>
+<li><strong>中文優化版</strong>：專門針對中文的優化版本</li>
+<li><strong>垂直領域模型</strong>：法律、醫療、金融等專業版本</li>
+<li><strong>邊緣設備部署</strong>：手機、IoT 設備優化</li>
+<li><strong>教育版</strong>：專門為教育場景設計的輕量版</li>
+</ul>
+<h3 id="生態系統建設">生態系統建設</h3>
+<ul>
+<li><strong>工具鏈完善</strong>：訓練、微調、部署工具</li>
+<li><strong>社區貢獻</strong>：開源社區共同改進</li>
+<li><strong>標準制定</strong>：推動開源 AI 標準</li>
+<li><strong>教育推廣</strong>：普及 AI 技術教育</li>
+</ul>
+<h2 id="-結論">📝 結論</h2>
+<p>GPT-OSS 20B 和 120B 的發佈標誌著 AI 民主化的重要里程碑。這不僅是技術的突破，更是開源精神的勝利。對於中文開發者和企業來說，這提供了前所未有的機會來構建本土化的 AI 應用。</p>
+<p>無論你是研究人員、開發者還是企業決策者，現在都是探索 GPT-OSS 的最佳時機。隨著社區的共同努力，我們期待看到更多創新的中文 AI 應用誕生。</p>
+<hr>
+<p><strong>立即行動</strong>：訪問 <a href="https://huggingface.co/openai">Hugging Face</a> 下載模型，加入 <a href="https://github.com/openai/gpt-oss">GitHub 社區</a> 貢獻代碼，或關注我們的博客獲取最新技術分享。</p>
+<p><em>這篇文章是否對你有幫助？在評論區分享你的 GPT-OSS 使用體驗，或者提出你遇到的技術問題！</em></p>  </div> </div> </section> </main> <footer> <div class="py-12"> <p class="text-xs text-text-secondary text-balance text-center" x-data="{ year: new Date().getFullYear() }">
+© <span x-text="year"></span> Syntax & Synapse. Exploring the intersection of AI and software development.
+</p> </div> </footer> <script type="module">window.toggleTheme=()=>{const t=document.documentElement.classList.toggle("dark");localStorage.setItem("theme-pref",t?"dark":"light")};</script></body></html><!-- Theme toggle helper script -->
